@@ -15,7 +15,7 @@ main{
     overflow-x: hidden;
 }
 
-/* HEADER */
+/*---------HEADER---------*/
 
 header{
     background-color: #fff;
@@ -87,7 +87,7 @@ header .Title-logo{
 }
 .Nav-sticky a{
     text-decoration: none;
-    padding-right: 40px;
+    /* padding-right: 40px; */
     text-transform: uppercase;
     color: #444444;
     font-weight: 600;
@@ -99,15 +99,30 @@ header .Title-logo{
     width: 0%;
     height: 2.4px;
     background-color:#444444;
-    transition: width 0.3s linear;
+    transition: width 0.4s linear;
     bottom: -5px;
     left: 0;
 }
 .Nav-sticky a:hover::after{
     width: 100%;
 }
+.menu-icon {
+  display: none;
+  position: relative;
+  bottom: 160px;
+  right: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 10px;
+  float: right;
+  z-index: 2;
+  padding: 0%;
+}
+.menu-toggle {
+  display: none;
+}
 
-/* SECTION-01 */
+/*---------SECTION-01---------*/
 
 .section-1{
     position: relative;
@@ -167,15 +182,12 @@ header .Title-logo{
     background-color: rgba(255, 255, 255, 0.516);
 }
 
-
-/* SECTION-02 */
-
+/*---------SECTION-02---------*/
 
 .section-2{
     padding: 25px;
     text-align: center;
     background-color: #f5f4f0;
-    /* height: 30vh; */
 }
 .section-2 .section-2-content{
     display: inline-block;
@@ -189,11 +201,10 @@ header .Title-logo{
     font-size: 45px;
 }
 
-/* SECTION-03 */
+/*---------SECTION-03---------*/
 
 .sec-03-container{
     width: 100%;
-    /* height: 50vh; */
     margin-top: 6%;
 }
 .section-3{
@@ -220,7 +231,6 @@ header .Title-logo{
     font-size: 45px;
     margin-bottom: 50px;
     line-height: 1.4;
-   
 }
 .section-3 Publishing-h2{
     position: relative;
@@ -247,10 +257,9 @@ header .Title-logo{
 .section-3 button:hover{
      background-color:  #869baa;
      /* border: solid 2px  #869baa; */
-
 }
 
-/* SECTION-04 */
+/*---------SECTION-04---------*/
 
 .section-4{
     clear: both;
@@ -259,7 +268,7 @@ header .Title-logo{
 }
 .section-4 .Book,h2{
     position: relative;
-    top: 55px;
+    top: 45px;
 }
 .section-4 span{
     letter-spacing: 2;
@@ -273,7 +282,7 @@ header .Title-logo{
 }
 .main-book-content{
     width: 100%;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 .book-div {
     width: 400px;
@@ -284,6 +293,13 @@ header .Title-logo{
     width: 240px;
     height: 300px;
     float: left;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+.book-div img:hover{
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
 }
 .book-div .book-content{
     float: right;
@@ -301,7 +317,7 @@ header .Title-logo{
     font-weight: 500;    
 }
 
-/* FOOTER */
+/*---------FOOTER---------*/
     
 footer{
     background-color: #1A1A1A;
@@ -362,10 +378,290 @@ footer .Copyrights{
     top: 36px;
 }
 
+/* MOBILE VIEW ONLY  (up to 480px)  */
 
+@media (max-width: 480px) {
 
+    * {
+        box-sizing: border-box;
+    }
 
+    body {
+        overflow-x: hidden;
+    }
 
+    /* HEADER */
 
+    header {
+        padding: 15px 15px 1px;
+        text-align: center;
+    }
+    .Icon-items,
+    .Title-logo,
+    .Search-bar {
+        display: block;
+        position: static;
+        margin: 5px auto;
+    }
+    .Icon-items{
+       display: block;
+       position: relative;
+       margin: 5px auto;
+       top: 63px;
+       left: 15px;
+    }
+    .Icon-items i{
+        font-size: 18px;
+    }
+    header .Title-logo {
+        position: fixed;
+        left: 0px;  
+        margin: 0px auto;
+        width: 100%;
+        height: auto;
+        top: 0px;
+        background-color: white;
+        z-index: 2;
+        padding: 20px 50px 15px 20px;
+        /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    }
+    .Title-logo img {             
+        height: auto;       
+        display: block;
+        width: 100%;
+    }
+    .Search-bar {
+        width: 100%;
+        margin-bottom: 100px;
+        display: flex;
+        position: relative;
+        left: 0%;
+        justify-content: center;
+        top: 75px;
+        margin-left: 0px;
+    }
+    .Search-bar input {
+        /* width: 60%; */
+        font-size: 14px;
+        padding: 0px 12px 0px 12px;
+        font-size: 14px;
+        border-radius: 5px 0px 0px 5px;
+    }
+    .Search-bar button {
+        width: 25%;
+        position: static;
+        padding: 12px;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .Search-bar img {
+        display: none; 
+    }
 
+    /* NAVBAR */
 
+    .Nav-sticky {
+        display: none;
+        position: fixed;
+        padding: 5px 0px 10px 0;
+        text-align: center;
+        z-index: 1;
+        display: none;
+        width: 100%;
+        background-color: #fff;
+        /* background: rgba(255, 255, 255, 0.35); */
+        /* backdrop-filter: blur(14px); */
+        top: 61px;
+        left: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .Nav-sticky ul {
+        right: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .Nav-sticky li {
+        display: block;
+        margin: 8px 0;
+        padding: 5px 0;
+    }
+    .Nav-sticky a {
+        font-size: 14px;
+    }
+    .menu-icon {
+        display: block;
+        background-color: white;
+        z-index: 2;
+        position: fixed;
+        top: 22px;
+        right: 15px;
+        height: fit-content;
+        width: fit-content;
+    }
+    .menu-toggle:checked~.Nav-sticky {
+        display: block;
+    }
+  
+    /* SECTION-1 */
+
+    .section-1 {
+        left: 0;                 
+        padding: 30px 20px;
+        height: auto;
+        background-position: center;
+        background-attachment: scroll;
+    }
+    .section-1-content {
+        top: 0;
+        padding: 15px;
+    }
+    .section-1-content h1 {
+        width: 100%;
+        font-size: 25px;
+        padding-right: 50px;
+    }
+    .section-1-content p {
+        font-size: 14px;
+        padding-right: 50px;
+    }
+    .section-1 br{
+        display: none;
+    }
+    .section-1-content button {
+        width: 100%;
+        margin-top: 10px;
+        margin: 0px 0px;
+    }
+    .section-1 .button-div{
+        display: flex;
+    }
+    .section-1-content .Explore-btn {
+        margin-left: 15px;
+    }
+
+    /* SECTION-2 */
+
+    .section-2 .section-2-content {
+        display: block;
+        margin: 10px auto;
+    }
+    .section-2-content p{
+        text-transform: uppercase;
+        margin-top: 50px;
+        font-size: 13px;
+    }
+    .section-2-content h2{
+        font-size: 30px;
+    }
+    .section-2 
+    .section-2-h2{
+        margin: 0px;
+    }
+    
+    /* SECTION-3 */
+
+    .section-3 {
+        margin: 40px 15px;
+        padding: 0;
+        text-align: center;
+    }
+    .section-3 img {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .section-3-content {
+        float: none;
+        width: 100%;
+    }
+    .section-3-content span{
+        font-size: 15px;
+    }
+    .section-3-content h2 {
+        font-size: 25px;
+        margin-bottom: 80px;
+    }
+    .section-3-content p{
+        font-size: 14px;
+    }
+    .section-3-content button{
+        margin-top: 25px;
+    }
+
+    /* SECTION-4 (BOOKS) */
+    
+    .section-4 {
+        padding: 40px 15px;
+    }
+    .section-4 h2 {
+        font-size: 25px;
+        top: 0;
+    }
+    .section-4 .Book {
+        top: 0;
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+    .main-book-content {
+        margin-top: 30px;
+    }
+    .book-div {
+        width: 100%;
+        margin: 40px 0;
+        text-align: center;
+    }
+    .book-div img {
+        float: none;
+        width: 200px;
+        height: 260px;
+        margin-bottom: 15px;
+    }
+    .book-div .book-content {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+    .book-div .book-content h3{
+        font-size: 19px;
+    }
+    .book-div .book-content p{
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    
+    footer {
+        padding: 50px 20px 40px;
+        text-align: center;
+    }
+    footer .footer-box {
+        width: 100%;
+        margin: 20px 0;
+        position: static;
+    }
+    footer .footer-box h3{
+        font-size: 25px;
+    }
+    footer .footer-box a{
+        font-size: 14px;
+    }
+    .footer-box p{
+        font-size: 14px;
+    }
+    .footer-box-2,
+    .footer-box-3 {
+        left: 0;
+        bottom: 0;
+    }
+    footer .footer-box-3 {
+        margin-top: 30px;
+    }
+    footer .Copyrights {
+        font-size: 12px;
+        margin-top: 15px;
+        top: 25px;
+    }
+}
