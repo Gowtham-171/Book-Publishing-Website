@@ -36,3 +36,13 @@ This project showcases a clean, modern design with sections for company introduc
 ![Website Preview](Preview-images/Webpage-preview4.png)
 ![Website Preview](Preview-images/Webpage-preview5.png)
 ![Website Preview](Preview-images/Webpage-preview6.png)
+
+---
+
+## 👨‍💻 Author
+
+**Gowtham Sundaram**
+
+Aspiring **Fullstack Developer** passionate about building interactive web applications and modern UI dashboards.
+
+---
